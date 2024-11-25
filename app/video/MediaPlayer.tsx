@@ -7,12 +7,10 @@ const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 const MediaPlayer = ({
   current_urls,
   set_current_urls,
-  title,
   set_current_values,
 } : {
   current_urls?: string[],
   set_current_urls?: (urls: string[]) => void,
-  title?: string,
   set_current_values?: (values: string) => void,
 }) => {
   const [playingUrl, setPlayingUrl] = useState<string | null>(null);
